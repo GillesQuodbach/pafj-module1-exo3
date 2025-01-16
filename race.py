@@ -5,8 +5,7 @@ def race_mode(mode,replay_game):
     start_horse_number = random.randint(12,21)
     horses_list = list(range(1,start_horse_number))
     final = list()
-    print(f"Type de la course = {mode}")
-    print(f"Cheveaux au départ = {start_horse_number}")
+
     match mode:
         case "tiercé":
             horses_number = 3
@@ -27,7 +26,8 @@ def race_mode(mode,replay_game):
         random_horse = horses_list[random_index]
         horses_list.remove(random_horse)
         final.append(random_horse)
-
+    print(f"Type de la course = {mode}")
+    print(f"Cheveaux au départ = {start_horse_number}")
     print(f"Arrivée du {mode} : {final}")
     return replay_game
 
